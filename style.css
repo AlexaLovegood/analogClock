@@ -1,3 +1,4 @@
+/* custom properties, get changed by js file */
 :root {
     --rotation-second: 0deg;
     --rotation-minute: 0deg;
@@ -12,6 +13,7 @@ body {
     align-items: center;
 }
 
+/* format of clock body */
 .clock {
     border: 5px solid black;
     border-radius: 50%;
@@ -22,11 +24,13 @@ body {
     position: relative;
 }
 
+/* general hand format */
 .hand {
     border: 2px solid black;
     rotate: -90deg;
 }
 
+/* format second-hand */
 .second-hand {
   border: 1px solid violet;
   width: 50%;
@@ -37,6 +41,7 @@ body {
   position: absolute;
 }
 
+/* format minute hand */
 .min-hand {
     border: 2px solid pink;
     width: 50%;
@@ -47,6 +52,7 @@ body {
     position: absolute;
 }
 
+/* format hour hand */
 .hour-hand {
     border: 2px solid skyblue;
     width: 50%;
