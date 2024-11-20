@@ -10,13 +10,14 @@
 
 .hand {
     border: 2px solid black;
-    rotate: 90deg;
+    rotate: -90deg;
 }
 
 .second-hand {
   border: 1px solid red;
-  margin-left: 50%;
+  width: 50%;
   margin-top: 50%;
-  transform-origin: bottom center;
+  margin-left: 50%;
+  transform-origin: left center;
   transform: rotate(90deg);
 }
