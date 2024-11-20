@@ -1,3 +1,6 @@
+:root {
+    --rotation-second: 0deg;
+}
 
 .clock {
     border: 5px solid black;
@@ -14,10 +17,10 @@
 }
 
 .second-hand {
-  border: 1px solid red;
+  border: 1px solid violet;
   width: 50%;
   margin-top: 50%;
   margin-left: 50%;
   transform-origin: left center;
-  transform: rotate(90deg);
+  transform: rotate(var(--rotation-second));
 }
