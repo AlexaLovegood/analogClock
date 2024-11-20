@@ -1,0 +1,80 @@
+/* custom properties, get changed by js file */
+:root {
+    --rotation-second: 0deg;
+    --rotation-minute: 0deg;
+    --rotation-hour: 0deg;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* format of clock body */
+.clock {
+    border: 5px solid black;
+    border-radius: 50%;
+    max-height: 100vh;
+    max-width: 100vh;
+    width: 25vw;
+    height: 25vw;
+    position: relative;
+}
+/* Tried to do the marking but couldn't figure it out in time */
+.outer-clock-face {
+    border: 1px none black;
+    max-height: 100vh;
+    max-width: 100vh;
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    justify-items: center;
+    position: absolute;
+}
+
+.marking {
+    border: 4px none black;
+    position: absolute;
+    width: 10%;
+}
+
+.marking-one {
+    border: 4px none red;
+    rotate: 90deg;
+    transform-origin: left center;
+    justify-self: center;
+}
+
+/* general hand format */
+.hand {
+    border: 2px solid black;
+    margin-top: 50%;
+    margin-left: 50%;
+    rotate: -90deg;
+    position: absolute;
+    transform-origin: left center;
+}
+
+/* format second-hand */
+.second-hand {
+  border: 1px solid violet;
+  width: 49%;
+  transform: rotate(var(--rotation-second));
+}
+
+/* format minute hand */
+.min-hand {
+    border: 3px solid pink;
+    width: 40%;
+    transform: rotate(var(--rotation-minute));
+}
+
+/* format hour hand */
+.hour-hand {
+    border: 4px solid skyblue;
+    width: 25%;
+    transform: rotate(var(--rotation-hour));
+}
