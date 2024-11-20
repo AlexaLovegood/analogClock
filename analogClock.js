@@ -5,7 +5,9 @@ let minute = now.getMinutes();
 let second = now.getSeconds();
 let secondChecker = second;
 let minuteChecker = minute;
+let hourChecker = hour;
 let move60 = 360 / 60;
+let move12 = 360 / 12;
 //update date
 function updateDate() {
   now = new Date();
@@ -40,6 +42,23 @@ function secondHand() {
 }
 //minhand
 function minuteHand() {
+  if (minuteChecker === minute) {
+    let moveDeg = move60 * minuteChecker;
+    //move secondHand
+    document.documentElement.style.setProperty(
+      "--rotation-minute",
+      `${moveDeg}deg`
+    );
+    if (minuteChecker === 59) {
+      minuteChecker = 0;
+    } else {
+      minuteChecker++;
+    }
+  }
+}
+
+//hourhand
+function hourHand() {
   if (minuteChecker === minute) {
     let moveDeg = move60 * minuteChecker;
     //move secondHand
