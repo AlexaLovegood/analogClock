@@ -59,17 +59,17 @@ function minuteHand() {
 
 //hourhand
 function hourHand() {
-  if (minuteChecker === minute) {
-    let moveDeg = move60 * minuteChecker;
+  if (hourChecker === hour) {
+    let moveDeg = move12 * hourChecker;
     //move secondHand
     document.documentElement.style.setProperty(
-      "--rotation-minute",
+      "--rotation-hour",
       `${moveDeg}deg`
     );
-    if (minuteChecker === 59) {
-      minuteChecker = 0;
+    if (hourChecker === 59) {
+      hourChecker = 0;
     } else {
-      minuteChecker++;
+      hourChecker++;
     }
   }
 }
@@ -77,3 +77,4 @@ function hourHand() {
 setInterval(updateDate, 100);
 setInterval(secondHand, 100);
 setInterval(minuteHand, 100);
+setInterval(hourHand, 100);
