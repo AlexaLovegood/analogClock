@@ -1,6 +1,6 @@
 :root {
     --rotation-second: 0deg;
-    --rotation-min: 0deg;
+    --rotation-minute: 0deg;
 }
 
 .clock {
@@ -34,6 +34,6 @@
     margin-top: 50%;
     margin-left: 50%;
     transform-origin: left center;
-    transform: rotate(var(--rotation-min));
+    transform: rotate(var(--rotation-minute));
     position: absolute;
 }
